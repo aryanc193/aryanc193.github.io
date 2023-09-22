@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --icon-size: 65px;
+}
+
+body:after{
+    content:url(../imgs/ig.png)url(../imgs/ig-glow.png)url(../imgs/tg-glow.png)url(../imgs/tg.png)url(../imgs/linkedin-glow2.png)url(../imgs/linkedin2.png)url(../imgs/github.png)url(../imgs/github-glow.png)url(../imgs/github-glow.png)url(../imgs/discord.png)url(../imgs/discord-glow.png)url(../imgs/olive-solid-bg.jpg); 
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+.hero-sec{
+    background-image: url(../imgs/olive-solid-bg.jpg);
+    z-index: -10;
+    width: 100%;
+    height: 120%;
+}
+
+a {
+    cursor: pointer;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+}
+
+.container
+{
+    position: relative;
+    width: calc(100% - 100px);
+    min-height: calc(100vh - 120px);
+    min-height: 300px;
+    /*background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);*/
+    border-radius: 20px;
+    border: 1.4px solid rgba(187, 187, 187, 0.3);
+    background: linear-gradient(226deg, rgba(0, 0, 0, 0.322) 0%, rgba(0, 0, 0, 0.589) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(77, 77, 77, 0.479);
+    /*backdrop-filter: blur(12px);*/
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding: 50px;
+    padding-top: 70px;
+}
+
+header
+{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.4px solid rgba(187, 187, 187, 0.3);
+    background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Poppins';
+}
+header ul
+{
+    display:  flex;
+}
+header ul li
+{
+    list-style: none;
+    margin: 0 10px;
+}
+header ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: linear-gradient(180deg, #1b1b1b73 0%, #86868688 100%);
+    box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
+}
+header ul li a:hover{
+    color: rgb(0, 255, 128);
+}
+
+.content
+{
+    transform: translateX(-100px);
+    max-width: 850px;
+    border: 1.4px solid rgba(187, 187, 187, 0.3);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.0);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px;
+    padding-left: 110px;
+}
+.content h2
+{
+    font-size: 2.6em;
+    color: #ffffff;
+}
+.content p
+{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+.content li
+{
+    text-decoration: none;
+    color: #fff;
+}
+/*
+.content a
+{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+*/
+
+.imgBx img
+{
+    border-radius: 50%;
+    width: 400px;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate 
+{
+    0%,100%
+    {
+        transform: translateX(50px);
+    }
+    50%
+    {
+        transform: translateX(100px);
+    }
+}
+
+.sci
+{
+    position: absolute;
+    right: -25px;
+    display: flex;
+    width: 90px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 18px;
+    border: 1.4px solid rgba(187, 187, 187, 0.3);
+    background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(10px);
+}
+.sci li
+{
+    text-decoration: none;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main-sm-ig{
+    transition: 0.7s;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-image: url(../imgs/ig.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-main-sm-ig:hover{
+    background-image: url(../imgs/ig-glow.png);
+    transition: 0.7s;
+}
+
+.header-main-sm-gh{
+    width: var(--icon-size);
+    height:var(--icon-size);
+    background-image: url(../imgs/github.png);
+    background-repeat: no-repeat;
+    transition: 0.7s;
+    background-size: cover;
+}
+.header-main-sm-gh:hover{
+    transition: 0.7s;
+    background-image: url(../imgs/github-glow.png);
+}
+
+.header-main-sm-tg{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-image: url(../imgs/tg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.7s;
+}
+.header-main-sm-tg:hover{
+    transition: 0.7s;
+    background-image: url(../imgs/tg-glow.png);
+    
+}
+
+.header-main-sm-link{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-image: url(../imgs/linkedin2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.7s;
+}
+.header-main-sm-link:hover{
+    background-image: url(../imgs/linkedin-glow2.png);
+    transition: 0.7s;
+}
+
+.header-main-sm-dc{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-image: url(../imgs/discord.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.7s;
+}
+.header-main-sm-dc:hover{
+    background-image: url(../imgs/discord-glow.png);
+    transition: 0.7s;
+}

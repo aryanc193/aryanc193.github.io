@@ -1,25 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
   --icon-size: 65px;
+  --icon-size-phone: 45px;
 }
 
 body:after {
-  content: url(../imgs/ig.png)url(../imgs/ig-glow.png)url(../imgs/tg-glow.png)url(../imgs/tg.png)url(../imgs/linkedin-glow2.png)url(../imgs/linkedin2.png)url(../imgs/github.png)url(../imgs/github-glow.png)url(../imgs/github-glow.png)url(../imgs/discord.png)url(../imgs/discord-glow.png)url(../imgs/olive-solid-bg.jpg);
+  content: url(../imgs/ig.png) url(../imgs/ig-glow.png) url(../imgs/tg-glow.png)
+    url(../imgs/tg.png) url(../imgs/linkedin-glow2.png)
+    url(../imgs/linkedin2.png) url(../imgs/github.png)
+    url(../imgs/github-glow.png) url(../imgs/github-glow.png)
+    url(../imgs/discord.png) url(../imgs/discord-glow.png)
+    url(../imgs/olive-solid-bg.jpg);
   position: absolute;
   width: 0;
   height: 0;
-  overflow: hidden;
   z-index: -1;
+  overflow-x: hidden;
 }
 
+body,
+html {
+  background: url(../imgs/olive-solid-bg.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  cursor: pointer;
+}
 
 .hero-sec {
   background-image: url(../imgs/olive-solid-bg.jpg);
@@ -50,10 +74,14 @@ section {
   min-height: calc(100vh - 120px);
   min-height: 600px;
   /*background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);*/
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);*/
   border-radius: 20px;
   border: 1.4px solid rgba(187, 187, 187, 0.3);
-  background: linear-gradient(226deg, rgba(0, 0, 0, 0.322) 0%, rgba(0, 0, 0, 0.589) 100%);
+  background: linear-gradient(
+    226deg,
+    rgba(0, 0, 0, 0.322) 0%,
+    rgba(0, 0, 0, 0.589) 100%
+  );
   box-shadow: 0px 4px 24px -1px rgba(77, 77, 77, 0.479);
   /*backdrop-filter: blur(12px);*/
   display: flex;
@@ -67,16 +95,21 @@ section {
 
 header {
   position: absolute;
-  top: -40px;
-  right: 20px;
-  left: 20px;
+  width: 100%;
+  top: -100px;
+  right: 10px;
+  left: 0px;
   padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1.4px solid rgba(187, 187, 187, 0.3);
-  background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
-  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
+  background: linear-gradient(
+    146deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 20px;
 }
@@ -86,11 +119,12 @@ header .logo {
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 header ul {
   display: flex;
+  overflow: hidden;
 }
 
 header ul li {
@@ -109,7 +143,8 @@ header ul li a {
 header ul li a:hover,
 header ul li a.active {
   background: linear-gradient(180deg, #1b1b1b73 0%, #86868688 100%);
-  box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
+  box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15),
+    0px 2px 4px 0px rgba(136, 144, 194, 0.2);
 }
 
 header ul li a:hover {
@@ -118,10 +153,9 @@ header ul li a:hover {
 
 .content {
   transform: translateX(-100px);
-  min-width: 500px;
-  max-width: 850px;
+  width: 100%;
   border: 1.4px solid rgba(187, 187, 187, 0.3);
-  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 60px;
@@ -129,20 +163,20 @@ header ul li a:hover {
   color: white;
 }
 
-#contact-details li{
+#contact-details li {
   list-style-type: disc;
 }
 
-#contact-details a:hover{
+#contact-details a:hover {
   color: aqua;
   text-decoration: underline;
 }
 
-#project-details li{
+#project-details li {
   list-style-type: disc;
 }
 
-#project-details a:hover{
+#project-details a:hover {
   color: rgb(255, 0, 0);
   text-decoration: underline;
   font-weight: 600;
@@ -163,42 +197,28 @@ header ul li a:hover {
   color: #fff;
 }
 
-
-/*
-.content a
-{
-    display: inline-block;
-    padding: 15px 30px;
-    background: #fff;
-    color: #8a2435;
-    margin-top: 20px;
-    border-radius: 30px;
-    font-size: 1.2em;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-*/
-
 .imgBx img,
 .imgBx3 img {
   border-radius: 50%;
   width: 100%;
 }
 
-.imgBx{
-    margin-left: 100px;
-    width: 400px;
+.imgBx {
+  margin-left: 100px;
+  width: 400px;
+  margin-right: 10%;
 }
 
-.imgBx3{
-  width: 250px;
-  margin-left: 400px;
+.imgBx3 {
+  width: 600px;
+  margin-left: 300px;
+  margin-right: 10%;
 }
 
-.imgBx4{
-  margin-left: 200px;
-  width: 300px;
+.imgBx4 {
+  margin-left: 0px;
+  width: 500px;
+  margin-right: 10%;
 }
 
 .imgBxproj img {
@@ -207,8 +227,9 @@ header ul li a:hover {
 }
 
 .imgBxproj {
-  width: 250px;
-  margin-left: 500px;
+  width: 500px;
+  margin-left: 70px;
+  margin-right: 10%;
 }
 
 .sci {
@@ -223,8 +244,12 @@ header ul li a:hover {
   background: #fff;
   border-radius: 18px;
   border: 1.4px solid rgba(187, 187, 187, 0.3);
-  background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
-  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
+  background: linear-gradient(
+    146deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -277,7 +302,6 @@ header ul li a:hover {
 .header-main-sm-tg:hover {
   transition: 0.7s;
   background-image: url(../imgs/tg-glow.png);
-
 }
 
 .header-main-sm-link {
@@ -320,4 +344,332 @@ header ul li a:hover {
 .header-main-sm-gmail:hover {
   background-image: url(../imgs/gmail-glow.png);
   transition: 0.7s;
+}
+
+
+/* ------------------------------Phone-------------------------------- */
+
+@media only screen and (max-width: 412px) {
+
+
+.hero-sec {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  overflow-y: hidden;
+}
+
+.container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  width: 100%;
+  height: 160%;
+  border-radius: 20px;
+  top: -0.5%;
+  border: 1px solid rgba(187, 187, 187, 0.3);
+  background: linear-gradient(
+    226deg,
+    rgba(0, 0, 0, 0.322) 0%,
+    rgba(0, 0, 0, 0.589) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(77, 77, 77, 0.479);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+header {
+  position: absolute;
+  width: 90%;
+  height: 12%;
+  top: 2%;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 5%;
+  border: 1.4px solid rgba(187, 187, 187, 0.3);
+  background: linear-gradient(
+    146deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-bottom: 20%;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-family: "Poppins";
+}
+
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  font-size: 1em;
+  margin-top: 1px;
+}
+
+header ul li {
+  list-style: none;
+  height: fit-content;
+  padding: 10px;
+  gap: 5px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 25px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: linear-gradient(180deg, #1b1b1b73 0%, #86868688 100%);
+  box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15),
+    0px 2px 4px 0px rgba(136, 144, 194, 0.2);
+}
+
+header ul li a:hover {
+  color: rgb(0, 255, 128);
+}
+
+.content {
+  position: relative;
+  transform: translateX(150px);
+  transform: translateY(150px);
+  width: 130%;
+  height: fit-content;
+  border: 1.4px solid rgba(0, 0, 0, 0.8);
+  background: linear-gradient(
+    226deg,
+    rgba(0, 0, 0, 0.322) 0%,
+    rgba(0, 0, 0, 0.589) 100%
+  );
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 20px;
+  margin-bottom: 55%;
+  margin-top: -10%;
+}
+
+#contact-details li {
+  list-style-type: disc;
+  margin-left: 5%;
+}
+
+#contact-details a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+#project-details li {
+  list-style-type: disc;
+}
+
+#project-details a:hover {
+  color: rgb(255, 0, 0);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.content h2 {
+  margin-top: 0px;
+  font-size: 1.75em;
+  color: #ffffff;
+}
+
+.content p {
+  margin-top: 5%;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.content li {
+  text-decoration: none;
+  color: #fff;
+}
+
+.imgBx3 img {
+  border-radius: 50%;
+  width: 70%;
+}
+
+.imgBx img{
+  border-radius: 100%;
+  width: 70%;
+}
+
+.imgBx {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 45%;
+  width: 250px;
+}
+
+.imgBx3 {
+  margin-top: 10%;
+  width: 250px;
+  margin-left: 25%;
+}
+
+.imgBx4 {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 0%;
+  width: 200px;
+}
+
+.imgBxproj img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.imgBxproj {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 0%;
+  width: 250px;
+}
+
+.sci {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  width: 95%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 18px;
+  border: 1.4px solid rgba(187, 187, 187, 0.3);
+  background: linear-gradient(
+    146deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  top: 92%;
+  margin-top: -1%;
+  left: 2.5%;
+}
+
+.sci li {
+  text-decoration: none;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-main-sm-ig {
+  transition: 0.7s;
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/ig.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-main-sm-ig:hover {
+  background-image: url(../imgs/ig-glow.png);
+  transition: 0.7s;
+}
+
+.header-main-sm-gh {
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/github.png);
+  background-repeat: no-repeat;
+  transition: 0.7s;
+  background-size: cover;
+}
+
+.header-main-sm-gh:hover {
+  transition: 0.7s;
+  background-image: url(../imgs/github-glow.png);
+}
+
+.header-main-sm-tg {
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/tg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.7s;
+}
+
+.header-main-sm-tg:hover {
+  transition: 0.7s;
+  background-image: url(../imgs/tg-glow.png);
+}
+
+.header-main-sm-link {
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/linkedin2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.7s;
+}
+
+.header-main-sm-link:hover {
+  background-image: url(../imgs/linkedin-glow2.png);
+  transition: 0.7s;
+}
+
+.header-main-sm-dc {
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/discord.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.7s;
+}
+
+.header-main-sm-dc:hover {
+  background-image: url(../imgs/discord-glow.png);
+  transition: 0.7s;
+}
+
+.header-main-sm-gmail {
+  width: var(--icon-size-phone);
+  height: var(--icon-size-phone);
+  background-image: url(../imgs/gmail.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.7s;
+}
+
+.header-main-sm-gmail:hover {
+  background-image: url(../imgs/gmail-glow.png);
+  transition: 0.7s;
+}
+  
 }

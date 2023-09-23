@@ -9,7 +9,8 @@
 
 :root {
   --icon-size: 65px;
-  --icon-size-phone: 45px;
+  --icon-size-phone: 50px;
+  --icon-size-hover:100px;
 }
 
 body:after {
@@ -46,7 +47,7 @@ a {
 }
 
 .hero-sec {
-  background-image: url(../imgs/bgimg.jpg);
+  background-image: url(../imgs/olive-solid-bg.jpg);
   z-index: -10;
   width: 100%;
   height: 120%;
@@ -236,7 +237,7 @@ header ul li a:hover {
   position: absolute;
   right: -25px;
   display: flex;
-  width: 90px;
+  width: 100px;
   height: 500px;
   justify-content: center;
   align-items: center;
@@ -263,7 +264,7 @@ header ul li a:hover {
 }
 
 .header-main-sm-ig {
-  transition: 0.7s;
+  transition: 0.4s;
   width: var(--icon-size);
   height: var(--icon-size);
   background-image: url(../imgs/ig.png);
@@ -273,7 +274,9 @@ header ul li a:hover {
 
 .header-main-sm-ig:hover {
   background-image: url(../imgs/ig-glow.png);
-  transition: 0.7s;
+  transition: 0.4s;
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
 }
 
 .header-main-sm-gh {
@@ -281,13 +284,15 @@ header ul li a:hover {
   height: var(--icon-size);
   background-image: url(../imgs/github.png);
   background-repeat: no-repeat;
-  transition: 0.7s;
+  transition: 0.4s;
   background-size: cover;
 }
 
 .header-main-sm-gh:hover {
-  transition: 0.7s;
+  transition: 0.4s;
   background-image: url(../imgs/github-glow.png);
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
 }
 
 .header-main-sm-tg {
@@ -296,11 +301,13 @@ header ul li a:hover {
   background-image: url(../imgs/tg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .header-main-sm-tg:hover {
-  transition: 0.7s;
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
+  transition: 0.4s;
   background-image: url(../imgs/tg-glow.png);
 }
 
@@ -310,12 +317,14 @@ header ul li a:hover {
   background-image: url(../imgs/linkedin2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .header-main-sm-link:hover {
   background-image: url(../imgs/linkedin-glow2.png);
-  transition: 0.7s;
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
+  transition: 0.4s;
 }
 
 .header-main-sm-dc {
@@ -324,12 +333,14 @@ header ul li a:hover {
   background-image: url(../imgs/discord.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .header-main-sm-dc:hover {
   background-image: url(../imgs/discord-glow.png);
-  transition: 0.7s;
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
+  transition: 0.4s;
 }
 
 .header-main-sm-gmail {
@@ -338,19 +349,20 @@ header ul li a:hover {
   background-image: url(../imgs/gmail.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .header-main-sm-gmail:hover {
+  width: var(--icon-size-hover);
+  height: var(--icon-size-hover);
   background-image: url(../imgs/gmail-glow.png);
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 
 /* ------------------------------Phone-------------------------------- */
 
 @media only screen and (max-width: 412px) {
-
 
 .hero-sec {
   overflow-x: hidden;
@@ -472,7 +484,7 @@ header ul li a:hover {
   color: white;
   padding-bottom: 20px;
   margin-bottom: 55%;
-  margin-top: -10%;
+  margin-top: 10%;
 }
 
 #contact-details li {
@@ -526,7 +538,7 @@ header ul li a:hover {
   position: relative;
   margin-top: 10%;
   margin-left: 45%;
-  width: 250px;
+  width: 360px;
 }
 
 .imgBx3 {
@@ -589,17 +601,11 @@ header ul li a:hover {
 }
 
 .header-main-sm-ig {
-  transition: 0.7s;
   width: var(--icon-size-phone);
   height: var(--icon-size-phone);
   background-image: url(../imgs/ig.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.header-main-sm-ig:hover {
-  background-image: url(../imgs/ig-glow.png);
-  transition: 0.7s;
 }
 
 .header-main-sm-gh {
@@ -608,12 +614,6 @@ header ul li a:hover {
   background-image: url(../imgs/github.png);
   background-repeat: no-repeat;
   transition: 0.7s;
-  background-size: cover;
-}
-
-.header-main-sm-gh:hover {
-  transition: 0.7s;
-  background-image: url(../imgs/github-glow.png);
 }
 
 .header-main-sm-tg {
@@ -622,12 +622,6 @@ header ul li a:hover {
   background-image: url(../imgs/tg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
-}
-
-.header-main-sm-tg:hover {
-  transition: 0.7s;
-  background-image: url(../imgs/tg-glow.png);
 }
 
 .header-main-sm-link {
@@ -636,12 +630,6 @@ header ul li a:hover {
   background-image: url(../imgs/linkedin2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
-}
-
-.header-main-sm-link:hover {
-  background-image: url(../imgs/linkedin-glow2.png);
-  transition: 0.7s;
 }
 
 .header-main-sm-dc {
@@ -650,12 +638,6 @@ header ul li a:hover {
   background-image: url(../imgs/discord.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
-}
-
-.header-main-sm-dc:hover {
-  background-image: url(../imgs/discord-glow.png);
-  transition: 0.7s;
 }
 
 .header-main-sm-gmail {
@@ -664,12 +646,5 @@ header ul li a:hover {
   background-image: url(../imgs/gmail.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.7s;
-}
-
-.header-main-sm-gmail:hover {
-  background-image: url(../imgs/gmail-glow.png);
-  transition: 0.7s;
-}
-  
+}  
 }

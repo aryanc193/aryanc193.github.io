@@ -811,6 +811,31 @@ button:hover {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+  background: #333333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff1a1a;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6161;
+}
+
 @media screen and (min-width: 600px) and (max-width: 1300px) {
   .toggle-switch {
     margin-top: 1em;

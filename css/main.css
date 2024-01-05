@@ -810,3 +810,38 @@ button:hover {
     transform: scale(2);
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+  .toggle-switch {
+    margin-top: 1em;
+  }
+
+  #mypic{
+    align-items: center;
+  }
+
+  .mypic-div{
+    left: 5rem;
+  }
+  #metablepic{
+    border-radius: 20px;
+  }
+
+  .project {
+    height: 400px;
+    width: 500px;
+    padding: 1%;
+  }
+
+  .project:nth-child(odd) {
+    margin-right: auto;
+  }
+
+  .project:nth-child(even) {
+    margin-left: auto;
+  }
+
+  #contact{
+    align-items: center;
+  }
+}

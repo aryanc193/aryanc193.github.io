@@ -63,9 +63,17 @@ body.dark-mode {
   width: 25px;
   height: 25px;
   margin: 5%;
-  background-color: #ffbb00; /* Set background color for light mode */
-  border-radius: 50%; /* Make it a circle */
-  transition: background-color 0.5s ease, transform 0.3s ease; /* Smooth transition for background color */
+  background-color: #ffbb00;
+  box-shadow: 2px 2px 15px 2px #ffbb00, 2px 2px 15px 2px #ffbb00;
+  background-image: url(../imgs/joyboy.png);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  /* Set background color for light mode */
+  border-radius: 50%;
+  /* Make it a circle */
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  /* Smooth transition for background color */
 }
 
 .dark-mode .moon {
@@ -86,6 +94,7 @@ body.dark-mode {
   height: 25px;
   width: 25px;
   background-color: #ffc320;
+  background-image: none;
   transform: translateX(30px);
   border-radius: 100%;
 }
@@ -783,7 +792,7 @@ button:hover {
     flex-direction: column;
     margin-right: 4rem;
     background-image: url(../imgs/connect.png);
-    border-color: #333333;
+    border: 5px solid #333;
   }
 
   .sci li:nth-child(even){

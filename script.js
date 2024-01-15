@@ -119,7 +119,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // scroll behaviour
 
 document.addEventListener("DOMContentLoaded", function () {
-  const projectsSection = document.getElementById("projects");
   const contactSection = document.getElementById("contact");
 
   const observerOptions = {
@@ -142,8 +141,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-  // Observe the projects and contact sections
-  observer.observe(projectsSection);
   observer.observe(contactSection);
 });

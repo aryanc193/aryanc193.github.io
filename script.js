@@ -115,3 +115,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+// scroll behaviour
+
+document.addEventListener("DOMContentLoaded", function () {
+  const projectsSection = document.getElementById("projects");
+  const contactSection = document.getElementById("contact");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3, // Adjust this threshold based on how much of the section should be visible
+  };
+
+  function handleIntersection(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      } else {
+        // Once not in the viewport, fade out
+        entry.target.style.opacity = 0;
+        entry.target.style.transition = "opacity 0.5s ease-out";
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+  // Observe the projects and contact sections
+  observer.observe(projectsSection);
+  observer.observe(contactSection);
+});

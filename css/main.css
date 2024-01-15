@@ -17,7 +17,7 @@
 body:after {
   content: url(../imgs/ig-2-2.png) url(../imgs/tg-2.png) url(../imgs/li-2-2.png)
     url(../imgs/github-2-2.png) url(../imgs/discord-2.png)
-    url(../imgs/starrynight.jpg) url(../imgs/Screenshot_2.png);
+    url(../imgs/starrynight.jpg) url(../imgs/Screenshot_2.png) url(../imgs/joyboy.png);
   position: absolute;
   width: 0;
   height: 0;
@@ -53,6 +53,63 @@ body.dark-mode {
   margin-right: -1em;
 }
 
+.toggle-image {
+  height: 70%;
+  width: 70%;
+  margin-top: 15%;
+  margin-left: 15%;
+  border-radius: 50%;
+  animation: jump 2.5s;
+}
+
+@keyframes jump {
+  0% {
+    margin-top: 30%;
+    margin-left: 50%;
+    opacity: 0;
+    height: 30%;
+    width: 30%;
+  }
+  30% {
+    background-color: #ffe986;
+    box-shadow: 2px 2px 15px 2px #ffffff, 2px 2px 15px 2px #ffffff;
+    transition: box-shadow ease, background-color 0.5s ease;
+    margin-top: 15%;
+    margin-left: 10%;
+    height: 80%;
+    width: 80%;
+    opacity: 100;
+    transform: rotateZ(10deg);
+  }
+  45% {
+    background-color: #ffe986;
+    box-shadow: 2px 2px 15px 2px #ffffff, 2px 2px 15px 2px #ffffff;
+    transition: box-shadow ease, background-color 0.5s ease;
+    transform: rotateZ(-10deg);
+    height: 80%;
+    width: 80%;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+  70% {
+    box-shadow: 2px 2px 15px 2px #ffffff, 2px 2px 15px 2px #ffffff;
+    background-color: #ffe986;
+    transition: box-shadow ease, background-color 1s ease-out;
+    transform: rotateZ(10deg);
+    height: 80%;
+    width: 80%;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+  100% {
+    transform: rotateZ(0deg);
+    height: 70%;
+    width: 70%;
+    margin-top: 15%;
+    margin-left: 15%;
+  }
+}
+
 .dark-mode .toggle-switch {
   background-color: #dddddd;
   background-image: url(../imgs/starrynight.jpg);
@@ -64,15 +121,13 @@ body.dark-mode {
   height: 25px;
   margin: 5%;
   background-color: #ffbb00;
-  box-shadow: 2px 2px 15px 2px #ffbb00, 2px 2px 15px 2px #ffbb00;
-  background-image: url(../imgs/joyboy.png);
-  background-position: center;
-  background-size: 70%;
+  box-shadow: 3px 3px 15px 2px #ffbb00, 3px 3px 15px 2px #ffbb00;
   background-repeat: no-repeat;
   /* Set background color for light mode */
   border-radius: 50%;
   /* Make it a circle */
-  transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 1s ease;
+  transition: background-color 0.5s ease, transform 0.3s ease,
+    box-shadow 3s ease;
   /* Smooth transition for background color */
 }
 
@@ -83,22 +138,35 @@ body.dark-mode {
   margin: 5%;
   top: 0px;
   left: 30px;
-  background-color: #dddddd; /* Set background color for dark mode */
-  border-radius: 100%; /* Make it a circle */
+  border-radius: 100%; 
   transition: 0.3s;
   background-image: url(../imgs/Screenshot_2.png);
   background-size: contain;
 }
 
+.dark-mode .toggle-image {
+  display: none;
+}
+
 .dark-mode .switch {
-  box-shadow: 2px 2px 15px 2px #ffbb00;
-  transition: transform 0.5s ease, box-shadow 1s ease;
+  animation: glow 2s;
+  transition: transform 0.5s ease;
   height: 25px;
   width: 25px;
-  background-color: #ffc320;
+  background-color: #ffbb00;
   background-image: none;
   transform: translateX(30px);
   border-radius: 100%;
+  box-shadow: 3px 3px 15px 1px #ffbb00;
+}
+
+@keyframes glow {
+  0%{
+    box-shadow: none;
+  }
+  100%{
+  box-shadow: 3px 3px 15px 1px #ffbb00;
+  transition: box-shadow 4s ease;}
 }
 
 a {
@@ -123,13 +191,12 @@ a {
   display: none;
 }
 
-#yokoso{
+#yokoso {
   display: none;
 }
 
-/* Hide other navigation when the burger menu is active */
 .burger-menu {
-  display: flex; /* Always show the burger menu icon */
+  display: flex; 
   cursor: pointer;
   padding: 20px;
   position: relative;
@@ -213,7 +280,6 @@ a {
   overflow: hidden;
   width: 100%;
   margin-top: 5em;
-
 }
 
 .mypic-div {
@@ -484,7 +550,7 @@ button:hover {
   justify-content: space-evenly;
 }
 
-.orline{
+.orline {
   display: none;
 }
 
@@ -610,7 +676,7 @@ button:hover {
     border-radius: 10%;
   }
 
-  #yokoso{
+  #yokoso {
     display: block;
     font-size: 7em;
     margin-left: 0.5em;
@@ -636,14 +702,15 @@ button:hover {
     transition: 0.3s;
   }
 
-  .dark-mode .navigation a, .dark-mode .name{
+  .dark-mode .navigation a,
+  .dark-mode .name {
     color: #f8f3e3;
   }
-  
+
   .navigation a:hover {
     text-decoration: underline 1px red;
   }
-  
+
   .mypic-div {
     left: 45em;
     width: 100%;
@@ -653,21 +720,21 @@ button:hover {
     border-radius: 10%;
     width: 50%;
   }
-  
+
   .text-on-my-pic,
   .typewriter {
     transform: scale(1.5) translateX(-125%) translateY(15%) translateZ(-40px)
       rotateZ(-40deg);
   }
-  
+
   .typewriter {
     transform: scale(1.25) translateX(-155%) translateY(55%) translateZ(-0px)
       rotateZ(-40deg);
-      margin-top: 2em;
-      font-weight: 400;
-      color: #000;
+    margin-top: 2em;
+    font-weight: 400;
+    color: #000;
   }
-  
+
   .resume {
     transform: translateX(-15%) translateY(0%) translateZ(-0px) rotateY(30deg)
       rotateX(35deg) rotateZ(0deg);
@@ -675,74 +742,74 @@ button:hover {
     margin-left: 7em;
   }
 
-  .aboutbox{
+  .aboutbox {
     padding: 2%;
     box-shadow: 0px 4px 54px 0px rgba(255, 170, 170, 0.8);
   }
-  
-  .abt-title{
+
+  .abt-title {
     font-size: 2.5em;
   }
-  
-  .abt{
+
+  .abt {
     font-size: 1.25em;
   }
 
-  #projects{
+  #projects {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
-  .proj-title{
+  .proj-title {
     font-size: 5em;
     width: 100%;
   }
 
-  .project{
+  .project {
     height: 400px;
     width: 500px;
     padding: 1%;
   }
 
-  .proj-div-title{
+  .proj-div-title {
     font-size: 2em;
   }
 
-  .proj-desc{
+  .proj-desc {
     font-size: 1.25em;
   }
 
-  .project:nth-child(odd){
+  .project:nth-child(odd) {
     box-shadow: 8px 8px 20px 2px rgba(255, 170, 170, 0.8);
-  background: linear-gradient(
-    226deg,
-    rgba(255, 0, 0, 0.8) 0%,
-    rgba(255, 0, 0, 0.5) 100%
-  );
+    background: linear-gradient(
+      226deg,
+      rgba(255, 0, 0, 0.8) 0%,
+      rgba(255, 0, 0, 0.5) 100%
+    );
     margin-left: 0em;
   }
 
-  .project:nth-child(even){
+  .project:nth-child(even) {
     box-shadow: 8px 8px 20px 2px rgba(255, 170, 170, 0.8);
-  background: linear-gradient(
-    226deg,
-    rgba(255, 0, 0, 0.8) 0%,
-    rgba(255, 0, 0, 0.5) 100%
-  );
+    background: linear-gradient(
+      226deg,
+      rgba(255, 0, 0, 0.8) 0%,
+      rgba(255, 0, 0, 0.5) 100%
+    );
     margin-right: 0em;
   }
 
-  #skill-title{
+  #skill-title {
     font-size: 5em;
   }
 
-  .skill-imgs{
+  .skill-imgs {
     width: var(--icon-size2);
     height: var(--icon-size2);
   }
 
-  #contact{
+  #contact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -750,32 +817,32 @@ button:hover {
     align-items: center;
   }
 
-  #contact-title{
+  #contact-title {
     width: 100%;
     font-size: 3em;
     margin-bottom: 0em;
   }
 
-  .contact-div2{
+  .contact-div2 {
     width: 40%;
     margin-left: 3rem;
   }
 
-  #myForm{
+  #myForm {
     width: 75%;
     height: fit-content;
   }
 
-  .messagebox{
+  .messagebox {
     height: 200px;
   }
-  .contact-div{
+  .contact-div {
     width: 40%;
     margin-left: 75rem;
     margin-top: -32.5rem;
   }
 
-  .orline{
+  .orline {
     display: block;
     width: 2px;
     height: 30rem;
@@ -783,11 +850,11 @@ button:hover {
     margin-right: 55rem;
   }
 
-  .contact-title3{
+  .contact-title3 {
     width: 100%;
   }
 
-  .sci{
+  .sci {
     width: 75%;
     height: 200%;
     display: flex;
@@ -796,29 +863,42 @@ button:hover {
     background-image: url(../imgs/connect.png);
     border: 5px solid #333;
   }
-
-  .sci li:nth-child(even){
+  
+  .dark-mode .sci{
+    border: 5px solid #f8f3e3;
+  }
+  
+  .sci li:nth-child(even) {
     margin-left: -25rem;
   }
-  .sci li:nth-child(odd){
+  .sci li:nth-child(odd) {
     margin-right: -25rem;
   }
 
-  .header-main-sm-link{
+  .header-main-sm-link {
     margin-top: 0.5em;
   }
-
-  .sci li div{
+  
+  .sci li div {
     width: var(--icon-size);
     height: var(--icon-size);
-  }  
+  }
   
   .sci li{
+    border-radius: 100%;
+  }
+  
+  .sci li {
     transition: 0.5s ease;
   }
-  .sci li:hover{
+  .sci li:hover {
     transition: 0.5s ease-in-out;
     transform: scale(2);
+  } 
+  .header-main-sm-dc:hover, .header-main-sm-gh:hover, .header-main-sm-gmail:hover, .header-main-sm-ig:hover, .header-main-sm-link:hover, .header-main-sm-tg:hover{
+    border-radius: 100%;
+    box-shadow: 0px 3px 20px 2px rgba(255, 44, 44, 0.918), 0px 3px 20px 2px rgba(255, 44, 44, 0.918);
+    transition: 0.5s ease;
   }
 }
 
@@ -826,7 +906,6 @@ button:hover {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -852,14 +931,14 @@ button:hover {
     margin-top: 1em;
   }
 
-  #mypic{
+  #mypic {
     align-items: center;
   }
 
-  .mypic-div{
+  .mypic-div {
     left: 5rem;
   }
-  #metablepic{
+  #metablepic {
     border-radius: 20px;
   }
 
@@ -877,7 +956,7 @@ button:hover {
     margin-left: auto;
   }
 
-  #contact{
+  #contact {
     align-items: center;
   }
 }

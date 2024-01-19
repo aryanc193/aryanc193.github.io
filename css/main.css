@@ -631,7 +631,7 @@ button:hover {
   color: #333;
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1300px) {
   .header {
     width: 99.2%;
   }

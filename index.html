@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Aryan Choudhary</title>
+    <title>Aryan Choudhary Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" type="image/x-icon" href="./imgs/favicon.png" />
@@ -17,11 +17,25 @@
         <div class="bar"></div>
       </div>
       <div class="overlay" id="overlay">
-        <!-- Links or navigation items go here -->
         <a href="#top">About Me</a>
         <a href="#projects">My Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact Me</a>
+      </div>
+      <div class="pcheader">
+        <ul class="navigation">
+          <li><a href="#top">About Me</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact me</a></li>
+          <li>
+            <a
+              href="./Resume/Resume-Aryan-Choudhary.pdf"
+              download="Resume-Aryan-Choudhary.pdf"
+              >Résumé</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="toggle-switch" id="dark-mode-toggle">
         <div class="switch">
@@ -33,41 +47,22 @@
         </div>
         <div class="moon"></div>
       </div>
-      <!-- Section 1: Hero/Header -->
     </header>
 
     <section id="mypic">
-      <div class="pcheader">
-        <p id="yokoso">ヨコソ</p>
-        <h1 class="name logo">Navigate through my portfolio</h1>
-        <ul class="navigation">
-          <li><a href="#top">About Me</a></li>
-          <li><a href="#projects">My Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact me</a></li>
-        </ul>
+      <div class="banner">
+        <img src="./imgs/banner.jpg" />
       </div>
       <div class="mypic-div">
-        <img src="./imgs/metable2-2.png" id="metablepic" />
         <div class="text-on-my-pic">
           <p id="hi">Hi, I am</p>
         </div>
         <div class="typewriter">
           <p id="name"><br /></p>
         </div>
-        <div class="text-on-my-pic">
-          <div class="resume">
-            <a
-              href="./Resume/Resume-Aryan-Choudhary.pdf"
-              download="Aryan-Choudhary-Resume.pdf"
-            >
-              <p id="resume-txt">
-                <nobr>R E S U M E</nobr>
-              </p>
-              <img src="./imgs/download-resume.png" id="dwnld-img" />
-            </a>
-          </div>
-        </div>
+      </div>
+      <div class="pfp">
+        <img src="./imgs/pfp.png" />
       </div>
     </section>
 
@@ -82,8 +77,6 @@
           As I navigate through my academic journey, I'm driven by the desire to
           evolve into a versatile Full Stack Developer and eventually transition
           into project management.<br />
-          Download my Resume by clicking on the Resume besides me on the table
-          above 😁
         </p>
       </div>
     </section>
@@ -235,12 +228,13 @@
       </div>
       <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       <div class="orline"></div>
+      <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       <div class="contact-div">
         <h2 class="contact-title3">My social links</h2>
         <ul class="sci">
           <li>
             <a href="https://github.com/aryanc193" target="_blank"
-              ><div class="header-main-sm-gh"></div
+            ><div class="header-main-sm-gh"></div
             ></a>
           </li>
           <li>
@@ -248,11 +242,11 @@
               href="https://www.linkedin.com/in/aryan-choudhary-a0b442203/"
               target="_blank"
               ><div class="header-main-sm-link"></div
-            ></a>
+                ></a>
           </li>
           <li>
             <a href="https://t.me/aryanc193" target="_blank"
-              ><div class="header-main-sm-tg"></div
+            ><div class="header-main-sm-tg"></div
             ></a>
           </li>
           <li>
@@ -269,13 +263,28 @@
           </li>
           <li>
             <a href="mailto:aryanc193@gmail.com" target="_blank"
-              ><div class="header-main-sm-gmail"></div
+            ><div class="header-main-sm-gmail"></div
             ></a>
           </li>
         </ul>
       </div>
+      <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      <div class="resume">
+        <div class="resume-box">
+          <a href="https://www.canva.com/design/DAF_f-ZsWzs/yFa-Sp9doadfw_Cg9hV38g/view?utm_content=DAF_f-ZsWzs&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
+            <img src="./Resume/resume.png" class="pdf-img" />
+            <h3 class="resume-title">Résumé</h3>
+            <a
+              href="./Resume/Resume-Aryan-Choudhary.pdf"
+              download="Resume-Aryan-Choudhary"
+              class="download-desc"
+            >
+            Donwload my résumé here &#10515;
+            </a>
+          </a>
+        </div>
+      </div>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>

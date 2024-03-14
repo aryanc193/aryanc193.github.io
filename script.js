@@ -143,3 +143,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(handleIntersection, observerOptions);
   observer.observe(contactSection);
 });
+
+
+window.addEventListener("scroll", function() {
+  let pfp = document.querySelector(".pfp");
+  let aboutNavLink = document.querySelector('a[href="#about"]');
+  let about = document.getElementById("about");
+  let aboutHeight = about.offsetHeight;
+  let aboutNavLinkRect = aboutNavLink.getBoundingClientRect();
+
+  if (window.scrollY > aboutHeight) {
+      // When scrolled past header, move pfp beside "About Me" navigation link
+      pfp.style.position = "relative"; // Fixed position for scrolling
+      pfp.style.top = headerHeight + "0px"; // Adjust top position based on header height
+      pfp.style.left = aboutNavLinkRect.right + "px";
+      pfp.style.transform = "scale(0.5)"; // Scale down to 50%
+  } else {
+      // When not scrolled past header, reset pfp to initial position
+      pfp.style.position = "absolute"; // Position it within the header
+      pfp.style.top = "auto";
+      pfp.style.left = "auto";
+      pfp.style.bottom = "0";
+      pfp.style.transform = "none"; // Reset scale
+  }
+});

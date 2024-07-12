@@ -600,11 +600,11 @@ button:hover {
   color: #333;
 }
 
-.resume{
+.resume {
   width: 100%;
   margin-top: 20px;
 }
-.resume-box{
+.resume-box {
   width: fit-content;
   text-align: center;
   padding: 5%;
@@ -615,16 +615,15 @@ button:hover {
   border-radius: 20px;
   color: #fff;
 }
-.dark-mode .resume-box{
+.dark-mode .resume-box {
   color: #000;
 }
-.resume-title{
+.resume-title {
   font-size: 1.5rem;
 }
-.download-desc{
+.download-desc {
   font-size: 1rem;
 }
-
 
 @media screen and (min-width: 1700px) {
   html {
@@ -833,6 +832,7 @@ button:hover {
     margin-right: 4rem;
     background-size: contain;
     background-repeat: no-repeat;
+    justify-content: space-between;
     border: 5px solid #333;
   }
 
@@ -872,15 +872,15 @@ button:hover {
     transition: 0.5s ease;
   }
 
-  .resume{
+  .resume {
     width: 25%;
     margin-left: 77rem;
     margin-top: -20rem;
   }
-  .resume-title{
+  .resume-title {
     font-size: 2.5rem;
   }
-  .download-desc{
+  .download-desc {
     font-size: 1.5rem;
   }
 }
@@ -913,11 +913,11 @@ button:hover {
   .toggle-switch {
     margin-top: 1rem;
   }
-  .banner{
+  .banner {
     width: 100vw;
   }
 
-  .banner img{
+  .banner img {
     width: 100vw;
     height: 40vh;
   }
@@ -950,19 +950,19 @@ button:hover {
   #contact {
     align-items: center;
   }
-  .contact-div2{
+  .contact-div2 {
     width: 100%;
   }
-  .contact-div2 form{
+  .contact-div2 form {
     width: 100%;
   }
-  .resume{
+  .resume {
     width: 55%;
   }
-  .resume-title{
+  .resume-title {
     font-size: 2.5rem;
   }
-  .download-desc{
+  .download-desc {
     font-size: 1.5rem;
   }
 }
@@ -1047,7 +1047,7 @@ button:hover {
   }
 
   .mypic-div {
-    left:   -45rem;
+    left: -45rem;
     width: 100%;
   }
 
@@ -1157,7 +1157,6 @@ button:hover {
     width: 100%;
   }
 
-
   .dark-mode .sci {
     border: 5px solid #f8f3e3;
   }
@@ -1193,15 +1192,15 @@ button:hover {
       0px 3px 20px 2px rgba(190, 0, 240, 0.918);
     transition: 0.5s ease;
   }
-  .resume{
+  .resume {
     width: 30%;
     margin-left: 60rem;
     margin-top: -20rem;
   }
-  .resume-title{
+  .resume-title {
     font-size: 2rem;
   }
-  .download-desc{
+  .download-desc {
     font-size: 1.25rem;
   }
 }

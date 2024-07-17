@@ -356,6 +356,10 @@ a {
   font-size: small;
 }
 
+.proj-desc {
+  text-overflow: clip;
+}
+
 /* ----------------------PROJECTS------------------------------- */
 #projects {
   width: 100%;

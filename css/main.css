@@ -31,6 +31,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: #fff;
+  
   overflow-x: hidden;
 }
 
@@ -50,7 +51,7 @@ body.dark-mode {
   position: relative;
   cursor: pointer;
   right: 10%;
-  margin-top: 5%;
+  margin-top: 5.5%;
   margin-right: -1rem;
 }
 
@@ -274,9 +275,10 @@ a {
 
 /*MAIN STUFF*/
 .banner {
+  background: linear-gradient(226deg, #00ffd9 40%, #0080ff 80%);
   margin-top: 60px;
   width: 100%;
-  height: 20vh;
+  height: 40vh;
 }
 
 .banner img {
@@ -298,6 +300,7 @@ a {
 }
 
 .mypic-div {
+
   perspective: 450px;
   position: relative;
   display: inline-block;
@@ -309,20 +312,19 @@ a {
 .typewriter {
   width: 300px;
   position: absolute;
-  top: 50%;
   left: 50%;
   text-align: left;
   color: #fff;
 }
 
-#hi {
-  margin-top: 20px;
-  font-size: 0.8rem;
+.hi {
+  margin-top: -80px;
+  font-size: small;
 }
 
 #name {
   margin-top: 35px;
-  font-size: 1.4rem;
+  font-size: large;
 }
 
 /* -------------------------------ABOUT------------------------ */
@@ -336,14 +338,14 @@ a {
 .aboutbox {
   width: 85%;
   height: fit-content;
-  border-radius: 5px;
+  border-radius: 50px;
   text-align: left;
   padding: 5%;
-  color: #fff;
+  color: #f8f3e3;
   border: 3px solid rgb(190, 0, 240);
   box-shadow: 2px 2px 20px 2px rgba(190, 0, 240, 0.8);
   backdrop-filter: brightness(0%);
-  background: linear-gradient(to right, #4de1cbbc 40%, #4883bfbc 80%);
+  background: linear-gradient(226deg, #0080ff 40%, #01c7a9 80%);
 }
 
 .abt-title {
@@ -608,8 +610,8 @@ button:hover {
 
 .dark-mode #contact,
 .dark-mode form {
-  background-color: #f8f3e3;
-  color: #333;
+  background-color: #000;
+  color: #fff;
 }
 
 .resume {
@@ -628,7 +630,7 @@ button:hover {
   color: #fff;
 }
 .dark-mode .resume-box {
-  color: #000;
+  color: #fff;
 }
 .resume-title {
   font-size: 1.5rem;
@@ -649,7 +651,7 @@ button:hover {
   }
   .toggle-switch {
     right: -110rem;
-    top: -4.5rem;
+    top: 4.5rem;
   }
   .name,
   .navigation {
@@ -715,10 +717,14 @@ button:hover {
     width: 100vw;
   }
 
-  #hi,
+  .hi,
+  #name {
+    font-size: 20px;
+    width: 100vw;
+  }
+
   #name {
     font-size: 50px;
-    width: 100vw;
   }
 
   .typewriter {
@@ -845,7 +851,7 @@ button:hover {
   }
 
   .dark-mode .sci {
-    border: 5px solid #f8f3e3;
+    border: 5px solid #000;
   }
 
   .header-main-sm-link {
@@ -994,10 +1000,14 @@ button:hover {
     width: 100vw;
     height: 40vh;
   }
-  #hi,
+  .hi,
+  #name {
+    font-size: 20px;
+    width: 100vw;
+  }
+
   #name {
     font-size: 50px;
-    width: 100vw;
   }
 
   .typewriter {
@@ -1047,7 +1057,7 @@ button:hover {
 
   .navigation a:hover {
     border: 1.4px solid rgba(187, 187, 187, 0.3);
-    background: linear-gradient(146deg, #4cdfcc 0%, #2794eb 100%);
+    background: linear-gradient(146deg, #00ffdd 0%, #2794eb 100%);
     box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -1061,7 +1071,8 @@ button:hover {
 
   .aboutbox {
     padding: 2%;
-    box-shadow: 0px 4px 54px 0px rgba(255, 170, 170, 0.8);
+    margin: 2%;
+    box-shadow: 2px rgb(112, 0, 150);
   }
 
   .abt-title {
@@ -1101,13 +1112,13 @@ button:hover {
 
   .project:nth-child(odd) {
     box-shadow: 8px 8px 20px 2px rgba(190, 0, 240, 0.8);
-    background: linear-gradient(226deg, #4883bfbc 0%, #4de1cbbc 100%);
+    background: linear-gradient(226deg, #0080ff 0%, #00ffd9 100%);
     margin-left: 0rem;
   }
 
   .project:nth-child(even) {
     box-shadow: 8px 8px 20px 2px rgba(190, 0, 240, 0.8);
-    background: linear-gradient(226deg, #4883bfbc 0%, #4de1cbbc 100%);
+    background: linear-gradient(226deg, #0080ff 0%, #00ffd9 100%);
     margin-right: 0rem;
   }
 
@@ -1166,7 +1177,7 @@ button:hover {
   }
 
   .dark-mode .sci {
-    border: 5px solid #f8f3e3;
+    border: 5px solid #000;
   }
 
   .header-main-sm-link {

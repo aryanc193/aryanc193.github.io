@@ -42,41 +42,41 @@ darkModeToggle.addEventListener("click", () => {
 });
 
 // TYPEWRITER effect
-const textElement = document.getElementById("name");
-const sentences = ["Aryan Choudhary", "a Student", "a Front end web developer"];
+// const textElement = document.getElementById("name");
+// const sentences = ["Aryan Choudhary", "a Student", "a Front end web developer"];
 
-let sentenceIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// let sentenceIndex = 0;
+// let charIndex = 0;
+// let isDeleting = false;
 
-function type() {
-  const currentText = sentences[sentenceIndex];
-  if (charIndex <= currentText.length) {
-    textElement.innerHTML = currentText.substring(0, charIndex);
-    charIndex++;
-    setTimeout(type, 100); // Adjust the speed of typing by changing the timeout
-  } else {
-    // Wait for a pause before starting to delete
-    setTimeout(() => {
-      isDeleting = true;
-      setTimeout(erase, 500); // Adjust the pause before erasing
-    }, 1000); // Adjust the pause before starting to delete
-  }
-}
+// function type() {
+//   const currentText = sentences[sentenceIndex];
+//   if (charIndex <= currentText.length) {
+//     textElement.innerHTML = currentText.substring(0, charIndex);
+//     charIndex++;
+//     setTimeout(type, 100); // Adjust the speed of typing by changing the timeout
+//   } else {
+//     // Wait for a pause before starting to delete
+//     setTimeout(() => {
+//       isDeleting = true;
+//       setTimeout(erase, 500); // Adjust the pause before erasing
+//     }, 1000); // Adjust the pause before starting to delete
+//   }
+// }
 
-function erase() {
-  const currentText = sentences[sentenceIndex];
-  if (charIndex >= 0) {
-    textElement.innerHTML = currentText.substring(0, charIndex);
-    charIndex--;
-    setTimeout(erase, 50); // Adjust the speed of erasing by changing the timeout
-  } else {
-    // Move to the next sentence
-    isDeleting = false;
-    sentenceIndex = (sentenceIndex + 1) % sentences.length;
-    setTimeout(type, 500); // Adjust the pause before typing the next sentence
-  }
-}
+// function erase() {
+//   const currentText = sentences[sentenceIndex];
+//   if (charIndex >= 0) {
+//     textElement.innerHTML = currentText.substring(0, charIndex);
+//     charIndex--;
+//     setTimeout(erase, 50); // Adjust the speed of erasing by changing the timeout
+//   } else {
+//     // Move to the next sentence
+//     isDeleting = false;
+//     sentenceIndex = (sentenceIndex + 1) % sentences.length;
+//     setTimeout(type, 500); // Adjust the pause before typing the next sentence
+//   }
+// }
 
 // Call the type function when the page is loaded
 document.addEventListener("DOMContentLoaded", type);

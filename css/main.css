@@ -249,8 +249,8 @@ a {
   top: 10%;
   left: -100%;
   width: 50%;
-  height: fit-content;
-  background-color: #009480f4;
+  height: 100vh;
+  background-color: #f8f3e3;
   z-index: 1;
   border-radius: 4px;
   transition: left 0.5s ease-in-out; /* Add animation property */
@@ -260,17 +260,21 @@ a {
   left: 0; /* Change animation when .open class is added */
 }
 
+.dark-mode .overlay{
+  background-color: #333;
+}
+
 .overlay a {
   display: block;
   padding: 20px;
   font-size: 1.2rem;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.overlay a:hover {
-  background-color: #333;
+.dark-mode .overlay a{
+  color: white;
 }
 
 /*MAIN STUFF*/
@@ -306,10 +310,11 @@ a {
   position: relative;
   display: inline-block;
   left: 1rem;
-  top: -150px;
+  top: -100px;
 }
 
 .text-on-my-pic h1{
+  font-weight:900;
   background-color: #0080ff;
   
   /* Create the gradient. */
@@ -371,17 +376,17 @@ a {
 
 .hi {
   margin-top: -80px;
-  font-size: small;
+  font-size: large;
 }
 
 #name {
-  font-size: large;
+  font-size: xx-large;
 }
 
 /* -------------------------------ABOUT------------------------ */
 #about {
-  margin-top: 2rem;
-  margin-left: -3rem;
+  margin: -4%;
+  margin-top: -12%;
   display: flex;
   justify-content: space-around;
   overflow-x: hidden;
@@ -393,6 +398,7 @@ a {
   text-align: left;
   color: #fff;
   padding: 5%;
+  margin: 2%;
   border: 3px solid #dd00ff;
   box-shadow: 2px 2px 20px 2px rgba(190, 0, 240, 0.8);
   backdrop-filter: brightness(0%);
@@ -448,18 +454,18 @@ a {
 }
 
 .dark-mode .project {
-  background-color: #4cdfccbc;
-  border: 3px solid #4cdfcc;
+  background-color: #00ffdd;
+  border: 3px solid #00ffdd;
 }
 
 .project:nth-child(even) {
   box-shadow: 8px 0px 20px 2px rgba(190, 0, 240, 0.8);
-  background: linear-gradient(226deg, #4883bfbc 0%, #4de1cbbc 100%);
+  background: linear-gradient(226deg, #0080ff 0%, #00ffd9 100%);
   margin-right: 5rem;
 }
 .project:nth-child(odd) {
   box-shadow: -8px -0px 20px 2px rgba(190, 0, 240, 0.8);
-  background: linear-gradient(226deg, #4de1cbbc 0%, #4883bfbc 100%);
+  background: linear-gradient(226deg, #00ffd9 0%, #0080ff 100%);
   margin-left: 5rem;
 }
 
@@ -701,8 +707,8 @@ button:hover {
     display: none;
   }
   .toggle-switch {
-    right: -110rem;
-    top: 4.5rem;
+    right: -105rem;
+    top: -4.5rem;
   }
   .name,
   .navigation {
@@ -766,6 +772,7 @@ button:hover {
   .mypic-div {
     margin-left: -50%;
     width: 100vw;
+    margin-bottom: 2%;
   }
 
   .hi,
@@ -797,6 +804,7 @@ button:hover {
 
   .aboutbox {
     padding: 2%;
+    margin-top: 15%;
   }
 
   .abt-title {
@@ -980,24 +988,47 @@ button:hover {
     margin-top: 1rem;
   }
   .banner {
-    width: 100vw;
+    width: 100%;
+    margin-top: 0%;
   }
 
-  .banner img {
-    width: 100vw;
-    height: 40vh;
+  .mypic-div{
+    width: 100%;
   }
 
+  .text-on-my-pic{
+    width: 100%;
+    margin-left: -50%;
+  }
+
+  .hi{
+    font-size: 30px;
+  }
+  #name{
+    font-size: 70px;
+  }
+  .h1, #name{
+    font-weight: 900;
+  }
+
+  .aboutbox{
+    margin-top: 20%;
+    padding: 2%;
+  }
+  .aboutbox p{
+    font-size: 20px;
+  }
+/* 
   #mypic {
     align-items: center;
   }
 
   .mypic-div {
     left: 5rem;
-  }
+  } 
   #metablepic {
     border-radius: 20px;
-  }
+  }*/
 
   .project {
     height: 400px;
@@ -1120,12 +1151,15 @@ button:hover {
   .mypic-div {
     left: -45rem;
     width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   .aboutbox {
     padding: 2%;
     margin: 2%;
     box-shadow: 2px rgb(112, 0, 150);
+    margin-top: 15%;
   }
 
   .abt-title {

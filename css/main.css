@@ -275,10 +275,11 @@ a {
 
 /*MAIN STUFF*/
 .banner {
-  background: linear-gradient(226deg, #00ffd9 40%, #0080ff 80%);
-  margin-top: 60px;
+  background: none;
+  margin-top: 4.5%;
   width: 100%;
-  height: 40vh;
+  height: 20vh;
+  border-radius: 20px;
 }
 
 .banner img {
@@ -300,12 +301,63 @@ a {
 }
 
 .mypic-div {
-
+  margin-top: 120px;
   perspective: 450px;
   position: relative;
   display: inline-block;
   left: 1rem;
   top: -150px;
+}
+
+.text-on-my-pic h1{
+  background-color: #0080ff;
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(226deg, #00ffd9 69%, #0080ff 100%);
+
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.text-on-my-pic h1:hover{
+  animation: rainbow-text-simple-animation 0.5s ease-in-out forwards;
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+      background-size: 650%;
+  }
+  40% {
+      background-size: 650%;
+  }
+  100% {
+      background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+      background-size: 100%;
+  }
+  80% {
+      background-size: 650%;
+  }
+  100% {
+      background-size: 650%;
+  }
 }
 
 .text-on-my-pic,
@@ -323,7 +375,6 @@ a {
 }
 
 #name {
-  margin-top: 35px;
   font-size: large;
 }
 
@@ -340,12 +391,12 @@ a {
   height: fit-content;
   border-radius: 50px;
   text-align: left;
+  color: #fff;
   padding: 5%;
-  color: #f8f3e3;
-  border: 3px solid rgb(190, 0, 240);
+  border: 3px solid #dd00ff;
   box-shadow: 2px 2px 20px 2px rgba(190, 0, 240, 0.8);
   backdrop-filter: brightness(0%);
-  background: linear-gradient(226deg, #0080ff 40%, #01c7a9 80%);
+  background: linear-gradient(226deg, #00ffd9 0%, #0095ff 60%);
 }
 
 .abt-title {
@@ -719,12 +770,13 @@ button:hover {
 
   .hi,
   #name {
-    font-size: 20px;
+    font-size: 50px;
     width: 100vw;
+    font-weight: 900;
   }
 
   #name {
-    font-size: 50px;
+    font-size: 100px;
   }
 
   .typewriter {
@@ -1002,12 +1054,13 @@ button:hover {
   }
   .hi,
   #name {
-    font-size: 20px;
+    font-size: 50px;
     width: 100vw;
+    font-weight: 900;
   }
 
   #name {
-    font-size: 50px;
+    font-size: 100px;
   }
 
   .typewriter {
